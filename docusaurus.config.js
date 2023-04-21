@@ -14,6 +14,7 @@ const config = {
     favicon: "img/favicon.ico",
     organizationName: "ivpk",
     projectName: "public-api-catalog",
+    trailingSlash: true,
 
     presets: [
         [
