@@ -55,7 +55,13 @@ const config = {
                         type: "doc",
                         docId: "intro",
                         position: "left",
-                        label: "Docs",
+                        label: "Katalogas",
+                    },
+                    {
+                        type: "doc",
+                        docId: "udts/intro",
+                        position: "left",
+                        label: "UDTS sąsajos",
                     },
                     {
                         href: "https://github.com/ivpk/public-api-catalog",
@@ -163,11 +169,6 @@ const config = {
                 apiKey: "441074cace987cbf4640c039ebed303c",
                 appId: "J0EABTYI1A",
                 indexName: "docusaurus-openapi",
-            },
-            announcementBar: {
-                id: "announcementBar_1",
-                content:
-                    "⚠️ It's very early prototype of developer portal. ⚠️",
             },
         }),
 
