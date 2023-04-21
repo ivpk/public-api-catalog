@@ -8,7 +8,7 @@ const config = {
     title: "Valstybės informacinių sistemų API katalogas",
     tagline: "OpenAPI plugin for generating API reference docs in Docusaurus v2",
     url: "https://api.gov.lt",
-    baseUrl: "/",
+    baseUrl: "/public-api-catalog/",
     onBrokenLinks: "warn",
     onBrokenMarkdownLinks: "warn",
     favicon: "img/favicon.ico",
