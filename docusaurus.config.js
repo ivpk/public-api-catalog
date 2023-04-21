@@ -45,7 +45,7 @@ const config = {
                 },
             },
             navbar: {
-                title: "Valstybės informacinių sistemų viešų API sąsajų katalogas",
+                title: "Valstybės informacinių sistemų API sąsajų katalogas",
                 logo: {
                     alt: "Keytar",
                     src: "img/docusaurus-openapi-docs-logo.svg",
@@ -210,7 +210,8 @@ const config = {
 
                     },
                     iprws: {
-                        specPath: "https://iprws.esveikata.lt/rest/ipr-docs",
+                        // specPath: "https://iprws.esveikata.lt/rest/ipr-docs",
+                        specPath: "specs/iprws.json",
                         outputDir: "docs/sam/iprws",
                     },
                     gitlab: {
