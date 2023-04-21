@@ -5,15 +5,15 @@ const {DOCUSAURUS_VERSION} = require("@docusaurus/utils");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-    title: "Dveloper portal demo",
+    title: "Valstybės informacinių sistemų API katalogas",
     tagline: "OpenAPI plugin for generating API reference docs in Docusaurus v2",
-    url: "https://devs.vycius.lt",
+    url: "https://api.gov.lt",
     baseUrl: "/",
     onBrokenLinks: "warn",
     onBrokenMarkdownLinks: "warn",
     favicon: "img/favicon.ico",
-    organizationName: "vycius",
-    projectName: "developers-portal-demo",
+    organizationName: "ivpk",
+    projectName: "public-api-catalog",
 
     presets: [
         [
@@ -24,7 +24,7 @@ const config = {
                     routeBasePath: "/",
                     sidebarPath: require.resolve("./sidebars.js"),
                     editUrl:
-                        "https://github.com/vycius/developers-portal-demo/tree/main",
+                        "https://github.com/ivpk/public-api-catalog/tree/main",
                     docLayoutComponent: "@theme/DocPage",
                     docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi
                 },
@@ -45,7 +45,7 @@ const config = {
                 },
             },
             navbar: {
-                title: "Dveloper portal demo",
+                title: "Valstybės informacinių sistemų viešų API sąsajų katalogas",
                 logo: {
                     alt: "Keytar",
                     src: "img/docusaurus-openapi-docs-logo.svg",
@@ -58,7 +58,7 @@ const config = {
                         label: "Docs",
                     },
                     {
-                        href: "https://github.com/vycius/developer-portal-demo",
+                        href: "https://github.com/ivpk/public-api-catalog",
                         position: "right",
                         className: "header-github-link",
                         "aria-label": "GitHub repository",
@@ -203,6 +203,15 @@ const config = {
                         downloadUrl:
                             "https://raw.githubusercontent.com/PaloAltoNetworks/docusaurus-openapi-docs/main/demo/examples/petstore.yaml",
 
+                    },
+                    infostatyba: {
+                        specPath: "https://statau.eptptest.lt/eInfostatyba-ws-app/v2/api-docs?group=Universali_integracija",
+                        outputDir: "docs/am/infostatyba",
+
+                    },
+                    iprws: {
+                        specPath: "https://iprws.esveikata.lt/rest/ipr-docs",
+                        outputDir: "docs/sam/iprws",
                     },
                     gitlab: {
                         specPath: "https://gitlab.com/gitlab-org/gitlab/-/raw/master/doc/api/openapi/openapi.yaml",
