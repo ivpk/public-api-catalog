@@ -181,7 +181,7 @@ const config = {
                 config: {
                     petstore_versioned: {
                         specPath: "examples/petstore.yaml",
-                        outputDir: "docs/am/petstore_versioned", // No trailing slash
+                        outputDir: "docs/apis/am/petstore_versioned", // No trailing slash
                         sidebarOptions: {
                             groupPathsBy: "tag",
                             categoryLinkSource: "tag",
@@ -192,7 +192,7 @@ const config = {
                         versions: {
                             "1.0.0": {
                                 specPath: "examples/petstore-1.0.0.yaml",
-                                outputDir: "docs/am/petstore_versioned/1.0.0", // No trailing slash
+                                outputDir: "docs/apis/am/petstore_versioned/1.0.0", // No trailing slash
                                 label: "v1.0.0",
                                 baseUrl: "/petstore_versioned/1.0.0/swagger-petstore-yaml", // Leading slash is important
                             },
@@ -200,37 +200,37 @@ const config = {
                     },
                     petstore: {
                         specPath: "examples/petstore.yaml",
-                        outputDir: "docs/sumin/petstore",
+                        outputDir: "docs/apis/sumin/petstore",
                         downloadUrl:
                             "https://raw.githubusercontent.com/PaloAltoNetworks/docusaurus-openapi-docs/main/demo/examples/petstore.yaml",
 
                     },
                     infostatyba: {
                         specPath: "https://statau.eptptest.lt/eInfostatyba-ws-app/v2/api-docs?group=Universali_integracija",
-                        outputDir: "docs/am/infostatyba",
+                        outputDir: "docs/apis/am/infostatyba",
 
                     },
                     iprws: {
                         // specPath: "https://iprws.esveikata.lt/rest/ipr-docs",
                         specPath: "specs/iprws.json",
-                        outputDir: "docs/sam/iprws",
+                        outputDir: "docs/apis/sam/iprws",
                     },
                     gitlab: {
                         specPath: "https://gitlab.com/gitlab-org/gitlab/-/raw/master/doc/api/openapi/openapi.yaml",
                         downloadUrl: "https://gitlab.com/gitlab-org/gitlab/-/raw/master/doc/api/openapi/openapi.yaml",
-                        outputDir: "docs/sumin/gitlab",
+                        outputDir: "docs/apis/sumin/gitlab",
                     },
                     cos: {
                         specPath: "examples/openapi-cos.json",
-                        outputDir: "docs/zum/cos",
+                        outputDir: "docs/apis/zum/cos",
                     },
                     burgers: {
                         specPath: "examples/food/burgers/openapi.yaml",
-                        outputDir: "docs/zum/burgers",
+                        outputDir: "docs/apis/zum/burgers",
                     },
                     yogurt: {
                         specPath: "examples/food/yogurtstore/openapi.yaml",
-                        outputDir: "docs/zum/yogurtstore",
+                        outputDir: "docs/apis/zum/yogurtstore",
                     },
                 },
             },
