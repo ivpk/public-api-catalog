@@ -5,8 +5,8 @@ const {DOCUSAURUS_VERSION} = require("@docusaurus/utils");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-    title: "Valstybės informacinių sistemų API katalogas",
-    tagline: "OpenAPI plugin for generating API reference docs in Docusaurus v2",
+    title: "Valstybės informacinių sistemų API katalogas",
+    tagline: "Valstybės informacinių sistemų ir registrų API sąsajų katalogas",
     url: "https://api.gov.lt",
     baseUrl: "/public-api-catalog/",
     onBrokenLinks: "warn",
@@ -46,7 +46,7 @@ const config = {
                 },
             },
             navbar: {
-                title: "Valstybės informacinių sistemų API sąsajų katalogas",
+                title: "Valstybės informacinių sistemų API sąsajų katalogas",
                 logo: {
                     alt: "Keytar",
                     src: "img/docusaurus-openapi-docs-logo.svg",
