@@ -167,9 +167,9 @@ const config = {
                 },
             ],
             algolia: {
-                apiKey: "441074cace987cbf4640c039ebed303c",
-                appId: "J0EABTYI1A",
-                indexName: "docusaurus-openapi",
+                apiKey: "59c25e11bff46edad859688ebeaf5ac1",
+                appId: "MSY41BB1TD",
+                indexName: "api-catalog",
             },
         }),
 
