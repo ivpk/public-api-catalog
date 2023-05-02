@@ -1,5 +1,5 @@
 {
-  "$schema": "schemas/specifications.schema.json",
+  "$schema": "https://raw.githubusercontent.com/ivpk/api-specifications/main/schemas/specifications.schema.json",
   "organizations": [
     {
       "id": "am",
