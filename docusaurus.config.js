@@ -34,7 +34,7 @@ function generateDocusaurusOpenApiConfig() {
             const specLabel = spec.label;
 
             const outputDir = path.join(organizationDir, specId);
-            const specPath = `https://raw.githubusercontent.com/vycius/api-specifications/main/openapi/${orgId}_${specId}.json`;
+            const specPath = `https://raw.githubusercontent.com/ivpk/api-specifications/main/openapi/${orgId}_${specId}.json`;
             const downloadUrl = spec.url;
 
             writeLabelFile(outputDir, specLabel, true);
