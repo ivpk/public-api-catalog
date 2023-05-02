@@ -10,6 +10,7 @@ jobs:
   build:
     name: Build page
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     permissions:
       contents: read
     steps:
@@ -42,6 +43,7 @@ jobs:
     needs: build
     concurrency: deploy-github-page
     if: github.ref == 'refs/heads/main'
+    timeout-minutes: 5
     permissions:
       contents: read
       pages: write
