@@ -21,4 +21,5 @@ yarn-error.log*
 /.idea/
 
 /docs/**/*.mdx
+/docs/apis/**/*.json
 /docs/**/sidebar.js
