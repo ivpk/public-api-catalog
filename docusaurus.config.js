@@ -2,6 +2,50 @@
 // Note: type annotations allow type checking and IDEs autocompletion
 
 const {DOCUSAURUS_VERSION} = require("@docusaurus/utils");
+const fs = require("fs");
+const path = require('path');
+
+const openApiDocsRoot = 'docs/apis';
+
+function writeLabelFile(dirPath, label, collapsed) {
+    if (!fs.existsSync(dirPath)) {
+        fs.mkdirSync(dirPath, {recursive: true});
+    }
+
+    fs.writeFileSync(path.join(dirPath, '_category_.json'), JSON.stringify({
+        label: label,
+        collapsed: collapsed
+    }));
+}
+
+function generateDocusaurusOpenApiConfig() {
+    const allSpecifications = JSON.parse(fs.readFileSync("specifications.json", "utf-8"));
+
+    const openApiConfig = {};
+
+    allSpecifications.organizations.forEach(org => {
+        const orgId = org.id;
+        const orgLabel = org.label;
+        const organizationDir = path.join(openApiDocsRoot, orgId);
+
+        writeLabelFile(organizationDir, orgLabel, false);
+        org.specifications.forEach(spec => {
+            const specId = spec.id;
+            const specLabel = spec.label;
+
+            const outputDir = path.join(organizationDir, specId);
+            const specPath = `https://raw.githubusercontent.com/ivpk/api-specifications/main/openapi/${orgId}_${specId}.json`;
+            const downloadUrl = spec.url;
+
+            writeLabelFile(outputDir, specLabel, true);
+
+            openApiConfig[specId] = {specPath, downloadUrl, outputDir};
+        });
+    });
+
+    return openApiConfig;
+}
+
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -179,61 +223,7 @@ const config = {
             {
                 id: "openapi",
                 docsPluginId: "classic",
-                config: {
-                    petstore_versioned: {
-                        specPath: "examples/petstore.yaml",
-                        outputDir: "docs/apis/am/petstore_versioned", // No trailing slash
-                        sidebarOptions: {
-                            groupPathsBy: "tag",
-                            categoryLinkSource: "tag",
-                        },
-                        version: "2.0.0", // Current version
-                        label: "v2.0.0", // Current version label
-                        baseUrl: "/petstore_versioned/swagger-petstore-yaml", // Leading slash is important
-                        versions: {
-                            "1.0.0": {
-                                specPath: "examples/petstore-1.0.0.yaml",
-                                outputDir: "docs/apis/am/petstore_versioned/1.0.0", // No trailing slash
-                                label: "v1.0.0",
-                                baseUrl: "/petstore_versioned/1.0.0/swagger-petstore-yaml", // Leading slash is important
-                            },
-                        },
-                    },
-                    petstore: {
-                        specPath: "examples/petstore.yaml",
-                        outputDir: "docs/apis/sumin/petstore",
-                        downloadUrl:
-                            "https://raw.githubusercontent.com/PaloAltoNetworks/docusaurus-openapi-docs/main/demo/examples/petstore.yaml",
-
-                    },
-                    infostatyba: {
-                        specPath: "https://statau.eptptest.lt/eInfostatyba-ws-app/v2/api-docs?group=Universali_integracija",
-                        outputDir: "docs/apis/am/infostatyba",
-
-                    },
-                    iprws: {
-                        // specPath: "https://iprws.esveikata.lt/rest/ipr-docs",
-                        specPath: "specs/iprws.json",
-                        outputDir: "docs/apis/sam/iprws",
-                    },
-                    gitlab: {
-                        specPath: "https://gitlab.com/gitlab-org/gitlab/-/raw/master/doc/api/openapi/openapi.yaml",
-                        downloadUrl: "https://gitlab.com/gitlab-org/gitlab/-/raw/master/doc/api/openapi/openapi.yaml",
-                        outputDir: "docs/apis/sumin/gitlab",
-                    },
-                    cos: {
-                        specPath: "examples/openapi-cos.json",
-                        outputDir: "docs/apis/zum/cos",
-                    },
-                    burgers: {
-                        specPath: "examples/food/burgers/openapi.yaml",
-                        outputDir: "docs/apis/zum/burgers",
-                    },
-                    yogurt: {
-                        specPath: "examples/food/yogurtstore/openapi.yaml",
-                        outputDir: "docs/apis/zum/yogurtstore",
-                    },
-                },
+                config: generateDocusaurusOpenApiConfig(),
             },
         ],
         [
