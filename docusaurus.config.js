@@ -93,7 +93,7 @@ const config = {
                 title: "Valstybės API katalogas",
                 logo: {
                     alt: "Keytar",
-                    src: "img/docusaurus-openapi-docs-logo.svg",
+                    src: "img/ivpk-logo.png",
                 },
                 items: [
                     {
@@ -159,7 +159,7 @@ const config = {
                         ],
                     },
                 ],
-                copyright: `Copyright © ${new Date().getFullYear()} Informacinės visuomenės plėtros komitetas. Built with Docusaurus ${DOCUSAURUS_VERSION}.`,
+                copyright: `Copyright © ${new Date().getFullYear()} Informacinės visuomenės plėtros komitetas.`,
             },
             prism: {
                 additionalLanguages: ["ruby", "csharp", "php", "java"],
