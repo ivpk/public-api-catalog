@@ -239,17 +239,17 @@ const config = {
                     {
                         tagName: "link",
                         rel: "icon",
-                        href: "/img/docusaurus-openapi-docs-logo.svg",
+                        href: "/img/ivpk-logo.png",
                     },
                     {
                         tagName: "link",
                         rel: "manifest",
-                        href: "/manifest.json", // your PWA manifest
+                        href: "/manifest.json",
                     },
                     {
                         tagName: "meta",
                         name: "theme-color",
-                        content: "rgb(37, 194, 160)",
+                        content: "rgb(255, 255, 255)",
                     },
                 ],
             },
