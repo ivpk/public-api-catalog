@@ -1,7 +1,5 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
-
-const {DOCUSAURUS_VERSION} = require("@docusaurus/utils");
 const fs = require("fs");
 const path = require('path');
 
@@ -118,48 +116,7 @@ const config = {
             },
             footer: {
                 style: "dark",
-                links: [
-                    {
-                        title: "Docs",
-                        items: [
-                            {
-                                label: "OpenAPI Docs",
-                                to: "/",
-                            },
-                        ],
-                    },
-                    {
-                        title: "Community",
-                        items: [
-                            {
-                                label: "Stack Overflow",
-                                href: "https://stackoverflow.com/questions/tagged/docusaurus",
-                            },
-                            {
-                                label: "Discord",
-                                href: "https://discordapp.com/invite/docusaurus",
-                            },
-                            {
-                                label: "Twitter",
-                                href: "https://twitter.com/docusaurus",
-                            },
-                        ],
-                    },
-                    {
-                        title: "More",
-                        items: [
-                            {
-                                label: "Blog",
-                                href: "https://medium.com/palo-alto-networks-developer-blog",
-                            },
-                            {
-                                label: "GitHub",
-                                href: "https://github.com/PaloAltoNetworks/docusaurus-openapi-docs",
-                            },
-                        ],
-                    },
-                ],
-                copyright: `Copyright © ${new Date().getFullYear()} Informacinės visuomenės plėtros komitetas.`,
+                copyright: `© ${new Date().getFullYear()} Informacinės visuomenės plėtros komitetas.`,
             },
             prism: {
                 additionalLanguages: ["ruby", "csharp", "php", "java"],
