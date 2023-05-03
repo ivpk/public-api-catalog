@@ -57,7 +57,15 @@ const config = {
     organizationName: "ivpk",
     projectName: "public-api-catalog",
     trailingSlash: true,
-
+    i18n: {
+        defaultLocale: "lt",
+        locales: ["lt"],
+        localeConfigs: {
+            lt: {
+                htmlLang: 'lt',
+            },
+        },
+    },
     presets: [
         [
             "classic",
