@@ -159,7 +159,7 @@ const config = {
                         ],
                     },
                 ],
-                copyright: `Copyright © ${new Date().getFullYear()} Palo Alto Networks, Inc. Built with Docusaurus ${DOCUSAURUS_VERSION}.`,
+                copyright: `Copyright © ${new Date().getFullYear()} Informacinės visuomenės plėtros komitetas. Built with Docusaurus ${DOCUSAURUS_VERSION}.`,
             },
             prism: {
                 additionalLanguages: ["ruby", "csharp", "php", "java"],
