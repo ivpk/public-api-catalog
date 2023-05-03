@@ -49,7 +49,7 @@ function generateDocusaurusOpenApiConfig() {
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-    title: "Valstybės informacinių sistemų API katalogas",
+    title: "Valstybės API katalogas",
     tagline: "Valstybės informacinių sistemų ir registrų API sąsajų katalogas",
     url: "https://api.gov.lt",
     baseUrl: "/",
@@ -90,7 +90,7 @@ const config = {
                 },
             },
             navbar: {
-                title: "Valstybės informacinių sistemų API sąsajų katalogas",
+                title: "Valstybės API katalogas",
                 logo: {
                     alt: "Keytar",
                     src: "img/docusaurus-openapi-docs-logo.svg",
@@ -100,7 +100,7 @@ const config = {
                         type: "doc",
                         docId: "intro",
                         position: "left",
-                        label: "Katalogas",
+                        label: "Apie projektą",
                     },
                     {
                         type: "doc",
