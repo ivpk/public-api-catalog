@@ -1,26 +1,20 @@
 {
-  "name": "api.gov.lt",
+  "name": "Valstybės API katalogas",
   "short_name": "api.gov.lt",
-  "theme_color": "#2980b9",
-  "background_color": "#424242",
+  "lang": "lt",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
   "display": "standalone",
   "scope": "./",
-  "start_url": "./index.html",
+  "start_url": "https://api.gov.lt/",
+  "apple-touch-icon": "apple-touch-icon.png",
   "related_applications": [
     {
-      "platform": "webapp",
-      "url": "https://docusaurus-openapi.tryingpan.dev/manifest.json"
+      "platform": "web",
+      "url": "https://api.gov.lt/"
     }
   ],
   "icons": [
-    {
-      "src": "img/docusaurus-openapi-docs-logo.svg",
-      "sizes": "72x72 144x144 200x200"
-    },
-    {
-      "src": "img/docusaurus-openapi-splash.png",
-      "sizes": "500x500"
-    },
     {
       "src": "windows11/SmallTile.scale-100.png",
       "sizes": "71x71"
@@ -456,11 +450,6 @@
     {
       "src": "ios/192.png",
       "sizes": "192x192"
-    },
-    {
-      "src": "ios/maskable_icon_x192.png",
-      "sizes": "192x192",
-      "purpose": "maskable"
     },
     {
       "src": "ios/256.png",
